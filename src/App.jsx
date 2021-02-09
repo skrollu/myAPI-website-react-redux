@@ -4,10 +4,13 @@ import Footer from './components/layout/Footer';
 import Error from './components/error/Error';
 import Home from './components/home/Home';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import { Provider } from 'react-redux'
+import store from "./store"
 
 function App() {
   return (
     <>
+    <Provider store={store}>
     <Router>
       <div className="App">
         <header className="header">
@@ -16,7 +19,7 @@ function App() {
         <main className="main">
             <Switch>
               <Route path="/" exact component={ Home } />
-              <Route path="/" component={Error} />
+              <Route path="/" component={ Error } />
             </Switch>
         </main>
         <footer className="footer">
@@ -24,6 +27,7 @@ function App() {
         </footer>
       </div>
     </Router>
+    </Provider>
     </>
   );
 }
