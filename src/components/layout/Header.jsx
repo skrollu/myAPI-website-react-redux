@@ -3,7 +3,9 @@ import './header.sass'
 function Header() {
     return (
         <>
-            <h3>Header</h3>
+            <div className="header-content">
+                <h3>Header</h3>
+            </div>
         </>
     )
 }

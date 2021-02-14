@@ -3,7 +3,9 @@ import './footer.sass'
 function Footer() {
     return (
         <>
-            <h3>Footer</h3>
+            <div className="footer-content">
+                <h3>Footer</h3>
+            </div>
         </>
     )
 }
