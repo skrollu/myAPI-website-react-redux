@@ -1,13 +1,18 @@
+import { useContext } from "react"
 import { useSelector, useDispatch } from "react-redux"
 import { DECREMENT, INCREMENT } from '../../redux/actions/types'
 import Movies from '../movies/Movies'
+import ThemeContext from '../../context/ThemeContext'
 
 import './home.sass'
 
 function Home() {
     const count = useSelector(state => state.increment.count)
     const dispatch = useDispatch();
-       
+
+    const context = useContext(ThemeContext);
+    console.log(context)
+
     const incrementClick = async(e) => {
         e.preventDefault();
         const data = { count };
